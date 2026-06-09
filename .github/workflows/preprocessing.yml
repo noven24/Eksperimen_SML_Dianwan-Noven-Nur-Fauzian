@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'namadataset_raw/**'
-      - 'preprocessing/automate_noven24.py'
+      - 'preprocessing/automate_Dianwan-Noven-Nur-Fauzian.py'
   workflow_dispatch:
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
 
     - name: Run preprocessing script
       run: |
-        python preprocessing/automate_noven24.py --input namadataset_raw/dataset.csv --output preprocessing/namadataset_preprocessing/dataset_processed.csv
+        python preprocessing/automate_Dianwan-Noven-Nur-Fauzian.py --input namadataset_raw/dataset.csv --output preprocessing/namadataset_preprocessing/dataset_processed.csv
         
     - name: Commit and push processed data
       run: |
