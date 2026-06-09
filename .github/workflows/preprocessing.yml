@@ -40,3 +40,10 @@ jobs:
         # Only commit if there are changes
         git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update processed dataset"
         git push
+        
+    - name: Simpan Dataset Bersih sebagai Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dataset-clean
+        path: preprocessing/namadataset_preprocessing/dataset_processed.csv
+        retention-days: 7
